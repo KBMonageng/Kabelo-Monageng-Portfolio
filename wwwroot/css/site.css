@@ -1,0 +1,465 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Section Styling */
+section {
+    padding: 50px;
+    border-bottom: 1px solid #444;
+    background-color: black;
+}
+
+/* Heading Styles with Vibrant Colors */
+#landing h1 {
+    color: #ff6f61; /* Vibrant Red for Landing */
+}
+
+#bio h2 {
+    color: #ffcc00; /* Vibrant Yellow for Bio */
+}
+
+#skills h2 {
+    color: #00bcd4; /* Vibrant Cyan for Skills */
+}
+
+#experience h2, #experience h3 {
+    color: #8bc34a; /* Vibrant Green for Experience */
+}
+
+#contact h2 {
+    color: #9c27b0; /* Vibrant Purple for Contact */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 30px;
+    }
+}
+/* Style for the split hemispheres in the landing page */
+#landing.split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    height: 100vh; /* Make the section fill the viewport height */
+}
+
+/* Style for the left hemisphere */
+#landing .left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circular profile picture with adjustments */
+.profile-pic {
+    width: 450px; /* Adjust size of the circle */
+    height: 450px;
+    border-radius: 50%; /* Circular shape */
+    border: 5px solid black; /* Add white border */
+    background-color: black; /* Add a background color behind the image */
+    object-fit: cover; /* Ensure the image scales and fits the circle */
+}
+
+
+/* Style for the right hemisphere */
+#landing .right {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+    #landing .right h1 {
+        font-size: 3rem;
+        color: #ff6f61; /* Keep the vibrant red color */
+    }
+
+    #landing .right p {
+        font-size: 1.2rem;
+        color: white;
+    }
+
+/* Responsive Design for the split layout */
+@media (max-width: 768px) {
+    #landing.split {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    #landing .left, #landing .right {
+        flex: none;
+        width: 100%;
+    }
+
+    #landing .right {
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+}
+/* Custom Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ff6f61; /* Vibrant red */
+    text-decoration: none;
+}
+
+    .navbar-brand:hover {
+        color: #ffcc00; /* Yellow on hover */
+    }
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+    .navbar-nav li {
+        margin-left: 20px;
+    }
+
+    .navbar-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+
+        .navbar-nav a:hover {
+            color: #00bcd4; /* Cyan on hover */
+        }
+/* Change hover effect for navbar links */
+.nav-link:hover {
+    color: #ff6f61; /* Vibrant red on hover */
+}
+
+/* Change hover effect for navbar brand */
+.navbar-brand:hover {
+    color: #ffcc00; /* Vibrant yellow on hover */
+}
+/* Style for the split hemispheres in the Bio section */
+#bio.split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    height: 100vh; /* Full viewport height */
+    background-color: black; /* Consistent black background */
+}
+
+/* Style for the left hemisphere in the Bio section */
+#bio .left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Square image with background blending */
+.bio-pic {
+    width: 350px; /* Adjust width and height for square image */
+    height: 350px;
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    opacity: 0.9; /* Slight transparency to blend with background */
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1); /* Subtle glow effect */
+    filter: grayscale(50%); /* Optional: Apply grayscale to blend more */
+}
+
+/* Style for the right hemisphere in the Bio section */
+#bio .right {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+    #bio .right h2 {
+        font-size: 2.5rem;
+        color: #ffcc00; /* Vibrant yellow for the Bio section heading */
+    }
+
+    #bio .right p {
+        font-size: 1.2rem;
+        color: white; /* White text for the bio content */
+    }
+
+/* Responsive Design for the split layout */
+@media (max-width: 768px) {
+    #bio.split {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    #bio .left, #bio .right {
+        flex: none;
+        width: 100%;
+    }
+
+    #bio .right {
+        text-align: center;
+    }
+
+    .bio-pic {
+        width: 300px;
+        height: 300px;
+    }
+}
+/* Skills Section Styling */
+#skills {
+    padding: 100px 50px;
+    background-color: black; /* Ensure consistent black background */
+    color: white;
+    text-align: center;
+}
+
+    #skills h2 {
+        font-size: 2.5rem;
+        color: #00bcd4; /* Vibrant green for section heading */
+        margin-bottom: 50px;
+    }
+
+/* Container for skill boxes */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px;
+}
+
+/* Individual skill boxes */
+.skill-box {
+    background-color: #333; /* Dark background for the boxes */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+}
+
+    /* Skill group heading */
+    .skill-box h3 {
+        font-size: 1.5rem;
+        color: #00bcd4; /* Vibrant yellow for skill group heading */
+        margin-bottom: 15px;
+    }
+
+    /* Skill list */
+    .skill-box ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .skill-box ul li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack boxes vertically */
+    }
+
+    .skill-box {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+/* Experience Section Styling */
+#experience {
+    padding: 100px 50px;
+    background-color: black; /* Consistent background */
+    color: white;
+}
+
+    #experience h2 {
+        font-size: 2.5rem;
+        color: #8bc34a; /* Vibrant green for section heading */
+        margin-bottom: 50px;
+    }
+
+/* Project Styling */
+.project {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+    .project-image img {
+        width: 100%; /* Image fills the container */
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2); /* Subtle shadow */
+    }
+
+.project-details {
+    flex: 2;
+    margin-left: 20px;
+    text-align: left;
+}
+
+    .project-details h3 {
+        font-size: 1.8rem;
+        color: #ffcc00; /* Vibrant yellow for project titles */
+    }
+
+    .project-details p {
+        font-size: 1.1rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+/* Work Experience Styling */
+.work-experience {
+    margin-top: 50px;
+}
+
+.work-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+}
+
+.job-info {
+    text-align: left;
+}
+
+    .job-info h3 {
+        font-size: 1.5rem;
+        color: #ffcc00; /* Vibrant yellow for job position */
+        margin-bottom: 10px;
+    }
+
+    .job-info p {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+.job-dates {
+    text-align: right;
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack project content vertically on small screens */
+    }
+
+    .project-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .work-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .job-dates {
+        margin-top: 10px;
+    }
+}
+/* Contact Section Styling */
+#contact {
+    padding: 100px 50px;
+    background-color: black; /* Consistent black background */
+    color: white;
+    text-align: center;
+}
+
+    #contact h2 {
+        font-size: 2.5rem;
+        color: #9c27b0; /* Vibrant purple for the contact heading */
+        margin-bottom: 50px;
+    }
+
+/* Contact container */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333; /* Dark container background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+}
+
+/* Contact details */
+.contact-details p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Links styling */
+.contact-details a {
+    color: #9c27b0; /* Vibrant yellow for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .contact-details a:hover {
+        color: #ff6f61; /* Change to vibrant red on hover */
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-details p {
+        font-size: 1rem;
+    }
+}
+/* Download CV Button Styling */
+.btn-cv {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff6f61; /* Vibrant yellow for the button */
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .btn-cv:hover {
+        background-color: #ff6f61; /* Change to vibrant red on hover */
+        color: white;
+    }
